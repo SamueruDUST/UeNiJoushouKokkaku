@@ -19,9 +19,6 @@ class MainClass {
     Console.WriteLine("Enter initial velocity 'v'");
     aux = Console.ReadLine();
     velocityV = Convert.ToDouble(aux);
-    Console.WriteLine("Enter time 't'");
-    aux = Console.ReadLine();
-    timeT = Convert.ToDouble(aux);
     for (int counter = 0; counter <= 5; counter = counter + 1) //Applied 5x
       {
       while (newTimeT <= 1.0)
@@ -31,10 +28,10 @@ class MainClass {
           positionX = Convert.ToDouble(aux);
           Console.WriteLine("Enter initial velocity 'v'");
           aux = Console.ReadLine();
-          velocityV = Convert.ToDouble(aux);
+          velocityV = Convert.ToDouble(aux);*/
           Console.WriteLine("Enter time 't'");
           aux = Console.ReadLine();
-          timeT = Convert.ToDouble(aux);*/
+          timeT = Convert.ToDouble(aux);
           newTimeT = timeT;
           
           positionXAtT = positionX + (velocityV * timeT);
