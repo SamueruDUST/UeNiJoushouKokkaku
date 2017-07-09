@@ -66,14 +66,20 @@ class MainClass {
     
     while (counter < 6)
       {
-        Console.WriteLine("Enter initial position for 'y': ");
+        /*Console.WriteLine("Enter initial position for 'y': ");
         aux = Console.ReadLine();
         posX = Convert.ToDouble(aux);
         Console.WriteLine("Enter initial velocity 'v': ");
         aux = Console.ReadLine();
-        velV = Convert.ToDouble(aux);
-        if (timT == 0 && sec == 0)
+        velV = Convert.ToDouble(aux);*/
+        if (timT == 0 && sec == 0 && posX == 0 && velV == 0)
           {
+            Console.WriteLine("Enter initial position for 'y': ");
+            aux = Console.ReadLine();
+            posX = Convert.ToDouble(aux);
+            Console.WriteLine("Enter initial velocity 'v': ");
+            aux = Console.ReadLine();
+            velV = Convert.ToDouble(aux);
             Console.WriteLine("Enter time 't' or seconds 's': ");
             aux = Console.ReadLine();
             store = Convert.ToDouble(aux);
@@ -84,14 +90,26 @@ class MainClass {
           {
             timT = 0;
             sec = 0;
+            Console.WriteLine("TimT " + timT);
+            Console.WriteLine("sec " + sec);
           }
         else
           {
-            timT = timT + timT;
+            timT = timT + sec;
+            Console.WriteLine("TimT " + timT);
+            Console.WriteLine("sec " + sec);
           }
         
-        posXAtTimT = posX + (velV * sec);
-        Console.WriteLine("Position at time " + timT + " is equal to: " + posXAtTimT);
+        if (posXAtTimT == 0 && velVAtTimT == 0)
+        {
+          posXAtTimT = posX + (velV * sec);
+          Console.WriteLine("Position at time " + timT + " is equal to: " + posXAtTimT);
+        }
+        else
+        {
+          posXAtTimTS = posXAtTimT + (velVAtTimT * sec);
+          Console.WriteLine("Position at time " + timT + " + " + sec + " is equal to: " + posXAtTimTS);
+        }
         velVAtTimT = velV + (earthGrav * timT);
         Console.WriteLine("Velocity at time " + timT + " is equal to: " + velVAtTimT);
         counter = counter + 1;
