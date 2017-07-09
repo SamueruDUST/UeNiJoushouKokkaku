@@ -110,6 +110,7 @@ class MainClass {
         {
           posXAtTimTS = posXAtTimT + (velVAtTimT * sec);
           Console.WriteLine("Position at time " + timT + " + " + sec + " is equal to: " + posXAtTimTS);
+          posXAtTimT = posXAtTimTS;
         }
         velVAtTimT = velV + (earthGrav * timT);
         Console.WriteLine("Velocity at time " + timT + " is equal to: " + velVAtTimT);
