@@ -104,6 +104,7 @@ class MainClass {
         {
           posXAtTimT = posX + (velV * sec);
           Console.WriteLine("Position at time " + timT + " is equal to: " + posXAtTimT);
+          Console.WriteLine("First time done.");
         }
         else
         {
